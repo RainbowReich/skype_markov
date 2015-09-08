@@ -40,7 +40,7 @@ module SkypeMarkov
     end
     
     def post(num_sentences)
-      @dictionary.generate_n_sentences num_sentences
+      @chat.post(@dictionary.generate_n_sentences(num_sentences))
     end
     
   end

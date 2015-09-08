@@ -3,7 +3,7 @@ require 'skype'
 require 'marky_markov'
 
 module SkypeMarkov
-  @@config = { :user_path => "/home/rainbowreich/markov_bot/users/" }
+  @@config = { :user_path => "/etc/markov_bot/users/" }
   ::Skype.config :app_name => "markov_bot"
   
   def self.chats
