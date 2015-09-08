@@ -1,6 +1,6 @@
 # SkypeMarkov
 
-TODO: Write a gem description
+SkypeMarkov allows you to create Skype bots that generate Markov chains from messages that users you specify post.
 
 ## Installation
 
@@ -20,7 +20,18 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You must have a running instance of Skype while using this gem.
+
+```ruby
+
+bot_chat = Skype.chats.find { |c| c.members.include? "username" }
+
+bot = SkypeMarkov::Bot.new("username", bot_chat)
+
+bot.post(1) #post one sentence.
+```
+
+Each bot that you create will have its own dictionary created from all of the specified user's messages in chat.
 
 ## Contributing
 
