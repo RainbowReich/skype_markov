@@ -1,0 +1,8 @@
+require 'skype'
+require 'marky_markov'
+
+module SkypeMarkov
+  
+  
+  
+end
