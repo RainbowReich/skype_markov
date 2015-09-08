@@ -1,4 +1,5 @@
 # SkypeMarkov
+[![Gem Version](https://badge.fury.io/rb/skype_markov.svg)](http://badge.fury.io/rb/skype_markov)
 
 SkypeMarkov allows you to create Skype bots that generate Markov chains from messages that users you specify post.
 
@@ -24,9 +25,9 @@ You must have a running instance of Skype while using this gem.
 
 ```ruby
 
-bot_chat = Skype.chats.find { |c| c.members.include? "username" }
+bot_chat = Skype.chats.find { |c| c.members.include? "username" } #find a valid chat object
 
-bot = SkypeMarkov::Bot.new("username", bot_chat)
+bot = SkypeMarkov::Bot.new("username", bot_chat) #create a new bot and generate a dictionary for its user
 
 bot.post(1) #post one sentence.
 ```
